@@ -7,15 +7,15 @@ GPIO.setmode(GPIO.BCM)
 # Pin that D1 is connected to
 PIN=23
 
+# Specify our pin as input
+GPIO.setup(PIN,GPIO.IN)
+
 # Initial State bucket name (displayed)
 BUCKET_NAME = ":wave: Motion Sensor" 
 # Initial State bucket key (hidden)
 BUCKET_KEY = "pizerowmotion"
 # Initial State access key
 ACCESS_KEY = "Your_Access_Key_Here"
-
-# Specify our pin as input
-GPIO.setup(PIN,GPIO.IN)
 
 # Variables that ensure we don't stream "Motion Detected" or "No Motion" twice in a row
 # This saves on sent events and processing power
